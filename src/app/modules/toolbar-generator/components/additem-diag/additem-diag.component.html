@@ -1,0 +1,37 @@
+<div class="diag-title" mat-dialog-title>Add Toolbar Item</div>
+
+<mat-dialog-content>
+    <form [formGroup]="diagform" class="diagform">
+    <div class="col labelinput">
+        <mat-form-field>
+            <input matInput type="text" placeholder="Enter a label for the toolbar item" formControlName="tblabel" />
+        </mat-form-field>
+    </div>
+    <div class="col" class="select-icon">
+        <button class="mat-raised-button " (click)="showIconsList()">Select a Material Icon</button>
+        <div class="icon-placeholder" (click)="showIconsList()"><label>Selected Icon</label><mat-icon [style.color]="tbcolor" [ngClass]="(!selectedicon)?'notselected':''">{{selectedicon}}</mat-icon></div>
+        <input type="hidden" formControlName="tbicon" />
+    </div>
+    <!-- <div class="col">
+        <mat-form-field>
+            <mat-select placeholder="Select Size" formControlName="tbiconsize">
+                <mat-option value="small">Small</mat-option>
+                <mat-option value="large">Large</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div> -->
+    <div class="col colorcol">
+        <button class="mat-raised-button  selectcolorbtn" (click)="toggle=!toggle">Select Icon a color</button>
+        <div class="color-placeholder"><label>Selected Color</label>
+        <div class="color-picker-box"  [(colorPicker)]="tbcolor" [style.background]="tbcolor" (colorPickerClose)="colorSelected(tbcolor)" [(cpToggle)]="toggle"></div>
+        </div>
+        <input type="hidden" formControlName="tbcolor" />
+    </div>
+</form> 
+ 
+</mat-dialog-content>
+
+<mat-dialog-actions> 
+    <button class="mat-raised-button mat-accent"(click)="addTBItem()">Add</button>
+    <button class="mat-raised-button"(click)="closeDialog()">Close</button>
+</mat-dialog-actions>

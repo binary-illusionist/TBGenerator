@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+// @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/theming';
+@include mat-core();
+@import './assets/variables.scss';
+// @import './assets/theme.scss';
+// @import './assets/tb-dark-theme.scss';
+
+$tb-theme-primary: mat-palette($mat-deep-purple, 700, 300, 900);
+$tb-theme-accent: mat-palette($mat-light-blue);
+$tb-theme-warn: mat-palette($mat-deep-orange, A200);
+
+
+$tb-theme: mat-light-theme(
+    $tb-theme-primary,
+    $tb-theme-accent,
+    $tb-theme-warn
+);
+
+
+
+.tb-theme{
+    @include angular-material-theme($tb-theme);
+}
+
+
+html{
+    font-family: $thm-font;
+    color: $thm-font-color;
+    font-size: $thm-content-font-size;
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    
+  }

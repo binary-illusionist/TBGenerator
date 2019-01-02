@@ -1,0 +1,17 @@
+.icons-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .icon-item{
+        padding: 8px;
+        display: inline-flex;
+        cursor: pointer;
+        &:hover{
+            background: #f4f4f4;
+        }
+        mat-icon{
+            font-size: 30px;
+            height: 30px;
+        }
+    }
+}

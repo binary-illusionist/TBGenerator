@@ -1,0 +1,16 @@
+.tbpreview-container{
+    &.ntb-message{
+        b{
+            font-size: 30px;
+            color: #d8d7d7;
+        }
+    }    
+}
+
+.exportbtn-container{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: flex-end;
+}
+

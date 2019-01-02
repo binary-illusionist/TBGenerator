@@ -1,0 +1,10 @@
+<div class="tbpreview-container" [innerHTML]='htmlCode' *ngIf="toolbar!==undefined; else NoToolbar" >
+</div>
+<div class="exportbtn-container" *ngIf="toolbar!==undefined">
+  <button mat-raised-button (click)="generatePreview('e')">Get the Code</button>
+</div>
+<ng-template #NoToolbar>
+  <div class="tbpreview-container ntb-message">
+    <b>Start adding tools to preview the toolbar</b> 
+  </div>
+</ng-template>

@@ -1,0 +1,11 @@
+<div class="diag-title" mat-dialog-title>Toolbar Code</div>
+<mat-dialog-content>
+  <div class="dialog-container">
+    <pre>
+      <code innerText="{{htmlCode}}"></code>
+    </pre>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="copyToClipboard()">Copy to Clipboard</button>
+</mat-dialog-actions>

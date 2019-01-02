@@ -1,0 +1,7 @@
+<div class="diag-title" mat-dialog-title>Select an Icon</div>
+<mat-dialog-content>
+    <div class="icons-container">
+        <div class="icon-item" (click)="selectIcon(i['iconcode'])" *ngFor="let i of allmaticons"><mat-icon>{{i['iconcode']}}</mat-icon></div>
+    </div>
+
+</mat-dialog-content>
