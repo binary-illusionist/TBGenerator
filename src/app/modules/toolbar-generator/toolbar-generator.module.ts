@@ -13,6 +13,8 @@ import { ColorPickerModule } from 'ngx-color-picker';
 import { TbPreviewComponent } from '@tbgen/modules/toolbar-generator/components/tb-preview/tb-preview.component';
 import { ExportcodeDiagComponent } from './components/exportcode-diag/exportcode-diag.component';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { SaveDiagComponent } from './components/save-diag/save-diag.component';
+import { OpenDiagComponent } from './components/open-diag/open-diag.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
     AdditemDiagComponent,
     SelIconDiagComponent,
     TbPreviewComponent,
-    ExportcodeDiagComponent
+    ExportcodeDiagComponent,
+    SaveDiagComponent,
+    OpenDiagComponent
   ],
   imports: [
     CommonModule,
@@ -45,7 +49,9 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
   entryComponents: [
     AdditemDiagComponent,
     SelIconDiagComponent,
-    ExportcodeDiagComponent
+    ExportcodeDiagComponent,
+    SaveDiagComponent,
+    OpenDiagComponent
   ]
 })
 export class ToolbarGeneratorModule { }

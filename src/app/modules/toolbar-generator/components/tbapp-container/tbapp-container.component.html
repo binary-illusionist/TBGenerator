@@ -1,6 +1,6 @@
 <div class="tb-app-container">
     <div class="top-toolbar">
-        <app-toolbar (cleartoolbar)="clearToolbar($event)"></app-toolbar>
+        <app-toolbar (appToolbarEvent)="appToolbarEvent($event)" (cleartoolbar)="clearToolbar($event)"></app-toolbar>
     </div>
     <div class="main-container">
         <div class="slick-toolbar">
